@@ -3510,7 +3510,7 @@ export const MarioGaneshGame: React.FC<Props> = ({
           className="w-full h-full object-contain block"
         />
               {/* Mobile Touch Overlay - Only displays on touch screens */}
-       <div className="mobile-touch-bar fixed bottom-6 left-0 right-0 z-50 pointer-events-none px-6">
+      <div className="max-md:block lg:hidden fixed bottom-6 left-0 right-0 z-50 pointer-events-none px-6">
         <div className="flex justify-between items-center w-full max-w-xl mx-auto">
           
           {/* Movement Pad */}
@@ -3784,44 +3784,6 @@ export const MarioGaneshGame: React.FC<Props> = ({
       </div>
 
         </div>
-                     {/* Universal Canvas Overlay Screen Handler */}
-      <style>{`
-        /* Desktop: Completely hide mobile keys */
-        @media (min-width: 1024px) {
-          .mobile-touch-bar {
-            display: none !important;
-          }
-        }
-        
-        /* Mobile Landscape: Bind keys inside the canvas viewport area */
-        @media (max-width: 1023px) and (orientation: landscape) {
-          .mobile-touch-bar {
-            display: flex !important;
-            position: absolute !important;
-            bottom: 5% !important;
-            left: 2% !important;
-            right: 2% !important;
-            z-index: 9999 !important;
-          }
-          .mobile-touch-bar button {
-            transform: scale(0.75) !important;
-            opacity: 0.85 !important;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
-          }
-        }
-
-        /* Mobile Portrait: Standard layout placement */
-        @media (max-width: 767px) and (orientation: portrait) {
-          .mobile-touch-bar {
-            display: flex !important;
-            position: fixed !important;
-            bottom: 20px !important;
-            z-index: 9999 !important;
-          }
-        }
-      `}</style>
-
-
       </div>
 
     </div>
