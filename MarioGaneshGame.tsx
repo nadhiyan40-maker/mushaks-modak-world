@@ -3510,7 +3510,7 @@ export const MarioGaneshGame: React.FC<Props> = ({
           className="w-full h-full object-contain block"
         />
               {/* Mobile Touch Overlay - Only displays on touch screens */}
-      <div className="max-md:block lg:hidden fixed bottom-6 left-0 right-0 z-50 pointer-events-none px-6">
+      <div className="fixed bottom-6 left-0 right-0 z-50 pointer-events-none px-6 block lg:hidden landscape:block">
         <div className="flex justify-between items-center w-full max-w-xl mx-auto">
           
           {/* Movement Pad */}
