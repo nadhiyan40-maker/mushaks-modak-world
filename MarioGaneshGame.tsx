@@ -3735,47 +3735,7 @@ export const MarioGaneshGame: React.FC<Props> = ({
           </div>
         </div>
       </div>
-                {/* Mobile Touch Overlay - Only displays on touch screens */}
-      <div className="md:hidden fixed bottom-6 left-0 right-0 z-50 pointer-events-none px-6">
-        <div className="flex justify-between items-center w-full max-w-xl mx-auto">
-          
-          {/* Movement Pad */}
-          <div className="flex items-center gap-3 pointer-events-auto">
-            <button 
-              onTouchStart={() => window.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowLeft', code: 'ArrowLeft' }))}
-              onTouchEnd={() => window.dispatchEvent(new KeyboardEvent('keyup', { key: 'ArrowLeft', code: 'ArrowLeft' }))}
-              className="w-16 h-16 rounded-full bg-slate-800/90 border border-amber-500/40 text-2xl active:bg-amber-600 flex items-center justify-center shadow-lg"
-            >
-              ⬅️
-            </button>
-            <button 
-              onTouchStart={() => window.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', code: 'ArrowRight' }))}
-              onTouchEnd={() => window.dispatchEvent(new KeyboardEvent('keyup', { key: 'ArrowRight', code: 'ArrowRight' }))}
-              className="w-16 h-16 rounded-full bg-slate-800/90 border border-amber-500/40 text-2xl active:bg-amber-600 flex items-center justify-center shadow-lg"
-            >
-              ➡️
-            </button>
-          </div>
-
-          {/* Attack & Jump Actions */}
-          <div className="flex items-center gap-4 pointer-events-auto">
-            <button 
-              onTouchStart={() => window.dispatchEvent(new KeyboardEvent('keydown', { key: 'x', code: 'KeyX' }))}
-              onTouchEnd={() => window.dispatchEvent(new KeyboardEvent('keyup', { key: 'x', code: 'KeyX' }))}
-              className="w-16 h-16 rounded-full bg-red-950/90 border border-red-500/50 text-red-400 font-bold text-xl flex items-center justify-center active:bg-red-600"
-            >
-              X
-            </button>
-            <button 
-              onTouchStart={() => window.dispatchEvent(new KeyboardEvent('keydown', { key: ' ', code: 'Space' }))}
-              onTouchEnd={() => window.dispatchEvent(new KeyboardEvent('keyup', { key: ' ', code: 'Space' }))}
-              className="w-20 h-20 rounded-full bg-amber-500 text-slate-950 flex flex-col items-center justify-center shadow-2xl text-xl font-bold active:bg-amber-400"
-            >
-              🔼
-              <span className="text-[10px] font-bold">JUMP</span>
-            </button>
-          </div>
-
+                
         </div>
       </div>
 
