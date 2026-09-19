@@ -3510,7 +3510,7 @@ export const MarioGaneshGame: React.FC<Props> = ({
           className="w-full h-full object-contain block"
         />
               {/* Mobile Touch Overlay - Only displays on touch screens */}
-      <div className="fixed bottom-6 left-0 right-0 z-50 pointer-events-none px-6 block lg:hidden landscape:block">
+       <div className="mobile-touch-bar fixed bottom-6 left-0 right-0 z-50 pointer-events-none px-6">
         <div className="flex justify-between items-center w-full max-w-xl mx-auto">
           
           {/* Movement Pad */}
@@ -3784,6 +3784,28 @@ export const MarioGaneshGame: React.FC<Props> = ({
       </div>
 
         </div>
+          {/* Universal Responsive Screen Handler */}
+      <style>{`
+        /* Hide completely on desktop screens */
+        @media (min-width: 1024px) {
+          .mobile-touch-bar {
+            display: none !important;
+          }
+        }
+        /* Force display on all mobile viewport phones turned horizontally */
+        @media (max-width: 1023px) and (orientation: landscape) {
+          .mobile-touch-bar {
+            display: block !important;
+          }
+        }
+        /* Standard vertical phone layout */
+        @media (max-width: 767px) {
+          .mobile-touch-bar {
+            display: block !important;
+          }
+        }
+      `}</style>
+
       </div>
 
     </div>
