@@ -1,0 +1,6 @@
+{
+  "name": "Mushak's Modak World",
+  "description": "A classic Mario-style side-scrolling platformer with a Ganesh festival theme starring Mushak across 10 progressive stages, collecting modaks and divine powers (Trishul zap, Lotus glide, Kavach shield), and ringing the sacred Maha Ghanti bell at the grand Hindu temple.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
