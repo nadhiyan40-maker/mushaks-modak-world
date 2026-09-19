@@ -3784,34 +3784,39 @@ export const MarioGaneshGame: React.FC<Props> = ({
       </div>
 
         </div>
-               {/* Universal Responsive Screen Handler */}
+                     {/* Universal Canvas Overlay Screen Handler */}
       <style>{`
-        /* Hide completely on desktop screens */
+        /* Desktop: Completely hide mobile keys */
         @media (min-width: 1024px) {
           .mobile-touch-bar {
             display: none !important;
           }
         }
         
-        /* Specialized Landscape Adjustment for Mobile Web Browsers */
+        /* Mobile Landscape: Bind keys inside the canvas viewport area */
         @media (max-width: 1023px) and (orientation: landscape) {
           .mobile-touch-bar {
-            display: block !important;
-            position: fixed !important;
-            bottom: 12px !important; /* Lifts the buttons higher so the browser toolbar doesn't hide them */
+            display: flex !important;
+            position: absolute !important;
+            bottom: 5% !important;
+            left: 2% !important;
+            right: 2% !important;
+            z-index: 9999 !important;
           }
-          /* Scale the buttons down slightly so they don't block the game viewport */
           .mobile-touch-bar button {
-            transform: scale(0.8) !important;
+            transform: scale(0.75) !important;
+            opacity: 0.85 !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
           }
         }
-        
-        /* Standard vertical phone layout */
+
+        /* Mobile Portrait: Standard layout placement */
         @media (max-width: 767px) and (orientation: portrait) {
           .mobile-touch-bar {
-            display: block !important;
+            display: flex !important;
             position: fixed !important;
-            bottom: 24px !important;
+            bottom: 20px !important;
+            z-index: 9999 !important;
           }
         }
       `}</style>
