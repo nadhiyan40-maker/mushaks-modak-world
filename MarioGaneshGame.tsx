@@ -3784,7 +3784,7 @@ export const MarioGaneshGame: React.FC<Props> = ({
       </div>
 
         </div>
-          {/* Universal Responsive Screen Handler */}
+               {/* Universal Responsive Screen Handler */}
       <style>{`
         /* Hide completely on desktop screens */
         @media (min-width: 1024px) {
@@ -3792,19 +3792,30 @@ export const MarioGaneshGame: React.FC<Props> = ({
             display: none !important;
           }
         }
-        /* Force display on all mobile viewport phones turned horizontally */
+        
+        /* Specialized Landscape Adjustment for Mobile Web Browsers */
         @media (max-width: 1023px) and (orientation: landscape) {
           .mobile-touch-bar {
             display: block !important;
+            position: fixed !important;
+            bottom: 12px !important; /* Lifts the buttons higher so the browser toolbar doesn't hide them */
+          }
+          /* Scale the buttons down slightly so they don't block the game viewport */
+          .mobile-touch-bar button {
+            transform: scale(0.8) !important;
           }
         }
+        
         /* Standard vertical phone layout */
-        @media (max-width: 767px) {
+        @media (max-width: 767px) and (orientation: portrait) {
           .mobile-touch-bar {
             display: block !important;
+            position: fixed !important;
+            bottom: 24px !important;
           }
         }
       `}</style>
+
 
       </div>
 
